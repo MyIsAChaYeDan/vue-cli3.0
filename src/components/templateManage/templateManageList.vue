@@ -9,8 +9,9 @@
             :before-close="handleClose">
             <div>
                 <el-form class="demo-form-inline" label-width="180px">
-                    <el-form-item label="模板类型：">
-                        {{library.getAtValue(dialogData.templateType,'templateType').label}}
+                    <el-form-item label="模板描述：">
+                        <!-- {{library.getAtValue(dialogData.templateType,'templateType').label}} -->
+                        {{dialogData.templateTitle}}
                     </el-form-item>
                     <el-form-item label="模板名称：">
                         {{dialogData.templateName}}
@@ -228,15 +229,7 @@ export default {
             )
         },
         template_detail(row){
-            let data={
-                templateType:row.templateType,
-                templateName:row.templateName,
-                templateCode:row.templateCode,
-                templateContext:row.templateContext,
-                // templateVarDesc:row.templateVarDesc,
-                templateRmk:row.templateRmk,
-            }
-            this.dialogData=data
+            this.dialogData=row
             this.dialogVisible=true
             this.$forceUpdate()
         },

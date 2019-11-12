@@ -65,8 +65,8 @@ module.exports = {
     devServer:{ //代理
         proxy:{
             '/api': {
-                target: 'http://192.168.0.213:9126/',
-                // target: 'https://sms.puxinwangxiao.com/api/',
+                // target: 'http://192.168.0.213:9126/',
+                target: 'https://sms.puxinwangxiao.com/api/',
                 changeOrigin: true,
                 // pathRewrite: {
                 //     '^/api': ''
