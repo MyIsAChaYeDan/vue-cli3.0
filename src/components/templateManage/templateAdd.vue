@@ -38,7 +38,7 @@
                 </el-select>
             </el-form-item> -->
             <el-form-item label="模板内容" prop="templateContext">
-                <el-input type="textarea" maxlength="100" placeholder="请输入内容(20字数)" v-model="formInline.templateContext"></el-input>
+                <el-input type="textarea" maxlength="100" placeholder="请输入内容" v-model="formInline.templateContext"></el-input>
             </el-form-item>
             <!-- <el-form-item label="渠道描述" prop="templateVarDesc">
                 <el-input type="textarea" maxlength="100" placeholder="请输入内容(20字数)" v-model="formInline.templateVarDesc"></el-input>
