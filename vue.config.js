@@ -26,18 +26,35 @@ module.exports = {
     productionSourceMap:false,//是否需要打包后产生source map 生产环境不需要
     crossorigin:'',//设置生成html的中 script的 crossorigin 属性 <script crossorigin src="http://127.0.0.1:8081/index.js"></script>
     integrity:false,//设置生成html的中 script的  Subresource Integrity 属性 增加安全性
-    configureWebpack:config => { //是否合并配置
-        // config.entry.app = ["babel-polyfill", "./src/main.js"]; //ie兼容es6
-        if (process.env.NODE_ENV === 'production') {
-          // 为生产环境修改配置...
-        } else {
-          // 为开发环境修改配置...
+    // configureWebpack:config => { //是否合并配置
+    //     // config.entry.app = ["babel-polyfill", "./src/main.js"]; //ie兼容es6
+    //     console.log(config.externals,'config111111111111111')
+    //     if (process.env.NODE_ENV === 'production') {
+    //         // 为生产环境修改配置...
+    //     } else {
+    //       // 为开发环境修改配置...
+    //     }
+    //     externals: {
+    //         'vue':'Vue',
+    //         'vuex':'Vuex',
+    //         'vue-router':'VueRouter',
+    //         'element-ui':'ELEMENT',
+    //         'Axios':'axios'
+    //     }
+    //     // resolve: {
+    //     //     alias: {
+    //     //         querystring: 'querystring-browser'
+    //     //     }
+    //     // }
+    // },
+    configureWebpack:{
+        externals: {
+            'vue':'Vue',
+            'vuex':'Vuex',
+            'vue-router':'VueRouter',
+            'element-ui':'ELEMENT',
+            'Axios':'axios'
         }
-        // resolve: {
-        //     alias: {
-        //         querystring: 'querystring-browser'
-        //     }
-        // }
     },
     chainWebpack: config => { //是否修改config配置
         // config.module.rule('vue').use('vue-loader').loader('vue-loader').tap(options => {
