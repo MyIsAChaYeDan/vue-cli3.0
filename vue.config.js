@@ -83,7 +83,7 @@ module.exports = {
         proxy:{
             '/api': {
                 // target: 'http://192.168.0.213:9126/',
-                target: 'https://sms.puxinwangxiao.com/api/',
+                target: 'https://sms.puxinwangxiao.com/',
                 changeOrigin: true,
                 // pathRewrite: {
                 //     '^/api': ''
