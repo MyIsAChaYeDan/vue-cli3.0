@@ -9,9 +9,9 @@ export default {
   name: 'app',
   watch:{
     $route(){
-      // if(!this.$store.state.common.token){
-      //   this.$router.push('/')
-      // }
+      if(!this.$store.state.common.token){
+        this.$router.push('/')
+      }
     }
   }
 }
